@@ -11,13 +11,14 @@ const EditProduct = () => {
 
   const {type, id} = useParams ()
  
-  
+  const baseURL = process.env.REACT_APP_SERVER_URL || "http://localhost:5005";
+
   useEffect(() => {
     
     const fetchData = async () => {
       try {
       
-        const baseURL = process.env.REACT_APP_SERVER_URL || "http://localhost:5005";
+       
         const res = await axios.get(`${baseURL}/${type}/getBy/${id}`);
         const { name, img, price, description } = res.data;
         setName(name);
@@ -46,8 +47,8 @@ const EditProduct = () => {
 
     try {
       
-      const baseURL = process.env.REACT_APP_SERVER_URL || "http://localhost:5005";
-      const res = await axios.put(`${baseURL}${type}/edit/${id}`, updatedProduct);
+      
+      const res = await axios.put(`${baseURL}/${type}/edit/${id}`, updatedProduct);
       console.log(res.data);
     } catch (err) {
       console.error(err);

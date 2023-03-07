@@ -1,17 +1,22 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import './CardProduct.css';
 import axios from 'axios';
-
 const CardProduct = ({ figure, type }) => {
+
+const navigate = useNavigate()
+
+
+
   const handleDelete = async (id) => {
     console.log('Eliminar',id);
     try {
       
      
       const baseURL = process.env.REACT_APP_SERVER_URL || "http://localhost:5005";
-      const res = await axios.post(`${baseURL}${type}/delete/${id}`);
+      const res = await axios.delete(`${baseURL}/${type}/delete/${id}`);
       console.log(res.data);
+      navigate (`/list/${type}`)
 } catch (err) {
   console.error(err);
 }

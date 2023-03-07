@@ -51,7 +51,7 @@ function App() {
           }
         />
                 <Route
-          path="/Figure"
+          path="/list/figures"
           element={
 
               <FigureCard/>
@@ -59,7 +59,7 @@ function App() {
           }
         />
         <Route
-          path="/Mangas"
+          path="/list/products"
           element={
             
               <MangasList />

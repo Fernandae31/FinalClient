@@ -14,11 +14,11 @@ function Navbar() {
       <button className="nav-button">Home</button>
     </Link>
   
-    <Link to="/Mangas">
+    <Link to="/list/products">
       <button className="nav-button">Mangas</button>
     </Link>
   
-    <Link to="/Figure">
+    <Link to="/list/figures">
       <button className="nav-button">Figures</button>
     </Link>
 
@@ -37,7 +37,7 @@ function Navbar() {
     {isLoggedIn && (
       <>
         <button className="nav-button" onClick={logOutUser}>
-          Log Out↗️
+          Log Out
         </button>
   
         <Link to="/profile">
