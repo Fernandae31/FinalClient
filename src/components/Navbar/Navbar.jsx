@@ -9,44 +9,45 @@ function Navbar() {
   const { isLoggedIn, user, logOutUser } = useContext(AuthContext);
 
   return (
-    <nav className="Principa-Nav">
-      <Link to="/">
-        <button className="nav-button">Home</button>
-      </Link>
+    <nav className="Principal-Nav">
+    <Link to="/">
+      <button className="nav-button">Home</button>
+    </Link>
+  
+    <Link to="/Mangas">
+      <button className="nav-button">Mangas</button>
+    </Link>
+  
+    <Link to="/Figure">
+      <button className="nav-button">Figures</button>
+    </Link>
 
-      <Link to="/Mangas">
-        <button className="nav-button">Mangas</button>
-      </Link>
+  
+    {!isLoggedIn && (
+      <>
+        <Link to="/signup">
+          <button className="nav-button">SignUp</button>
+        </Link>
+        <Link to="/login">
+          <button className="nav-button" onClick={isLoggedIn}>LogIn</button>
+        </Link>
+      </>
+    )}
 
-      <Link to="/Figures">
-        <button className="nav-button">Figures</button>
-      </Link>
-
-      {!isLoggedIn && (
-        <>
-          <Link to="/signup">
-            <button className="nav-button">Sign Up</button>
-          </Link>
-          <Link to="/login">
-            <button className="nav-button">Log In</button>
-          </Link>
-        </>
-      )}
-
-      {isLoggedIn && (
-        <>
-          <button className="nav-button" onClick={logOutUser}>
-            Log Out
-          </button>
-
-          <Link to="/profile">
-            <button className="nav-button">Profile</button>
-          </Link>
-
-          <span>{user && user.name}</span>
-        </>
-      )}
-    </nav>
+    {isLoggedIn && (
+      <>
+        <button className="nav-button" onClick={logOutUser}>
+          Log Out↗️
+        </button>
+  
+        <Link to="/profile">
+          <button className="nav-button">Profile</button>
+        </Link>
+  
+        <span>{user && user.name}</span>
+      </>
+    )}
+  </nav>
   );
 }
 

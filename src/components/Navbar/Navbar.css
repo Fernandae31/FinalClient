@@ -1,15 +1,18 @@
-.nav-button {
-    background-color: plum; 
-    border: none; 
-    color: white; 
-    padding: 12px 24px; 
-    text-align: center; 
-    text-decoration: none; 
-    display: inline-block; 
-    font-size: 16px; 
-    margin: 4px 2px;
-    cursor: pointer; 
-  }
-  .Principal-Nav{
-    
-  }
+.Principal-Nav {
+  background: linear-gradient(90deg, rgb(239, 162, 246) 10%, rgba(237,165,236,1) 90%);
+  display: flex;
+  justify-content: space-evenly;
+  width: 100vw;
+  height: 70px;
+  font-family: 'Comfortaa', sans-serif;
+  text-decoration: none;
+ }
+ .nav-button{
+  color: white;
+  background-color:rgb(239, 162, 246);
+  border: none;
+  border-radius: 10%;
+  cursor: pointer;
+  font-size: 16px;
+  text-decoration: none;
+}

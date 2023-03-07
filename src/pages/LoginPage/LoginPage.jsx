@@ -1,8 +1,31 @@
 import "./LoginPage.css";
+import 'bootstrap/dist/css/bootstrap.min.css'
 import { useState, useContext } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../context/auth.context";
 import authService from "../../services/auth.service";
+
+export const loginPageAction = async ({ request }) => {
+	const formData = await request.formData()
+	const email = formData.get("email")
+	const password = formData.get("password")
+
+	try {
+		const { data } = await authService.login({ email, password })
+		return {
+			authToken: data.authToken,
+			error: null
+		}
+	} catch (error) {
+		const {
+			request: { response }
+		} = error
+		const { message } = JSON.parse(response)
+		return { error: message, authToken: null }
+	}
+}
+
+
 
 function LoginPage() {
   const [email, setEmail] = useState("");
@@ -34,29 +57,26 @@ function LoginPage() {
   };
 
   return (
-    <div className="LoginPage">
-      <h1>Login</h1>
+    <div className="LoginPage" style={{ position: "relative" }}>
 
       <form onSubmit={handleLoginSubmit}>
         <label>Email:</label>
         <input type="email" name="email" value={email} onChange={handleEmail} />
 
         <label>Password:</label>
-        <input
-          type="password"
-          name="password"
-          value={password}
-          onChange={handlePassword}
-        />
+        <input type="password" name="password" value={password} onChange={handlePassword}/>
 
         <button type="submit">Log In</button>
-      </form>
+        </form>
+     
 
       {errorMessage && <p className="error-message">{errorMessage}</p>}
 
-      <p>Don't have an account yet?</p>
-      <Link to={"/signup"}>Sign Up</Link>
-    </div>
+     
+   
+    
+       </div>
+
   );
 }
 

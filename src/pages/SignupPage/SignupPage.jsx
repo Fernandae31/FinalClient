@@ -1,6 +1,6 @@
 import "./SignupPage.css";
 import { useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import authService from "../../services/auth.service";
 
 
@@ -48,10 +48,10 @@ function SignupPage() {
   };
 
   return (
-    <div className="SignupPage">
-      <h1>Sign Up</h1>
+   
+    <div className="SignupPage" style={{ position: "relative" }}>
 
-      <form onSubmit={handleSignupSubmit}>
+      <form  onSubmit={handleSignupSubmit}>
         <label>Email:</label>
         <input type="email" name="email" value={email} onChange={handleEmail} />
 
@@ -62,17 +62,17 @@ function SignupPage() {
           value={password}
           onChange={handlePassword}
         />
-
         <label>Name:</label>
-        <input type="text" name="name" value={name} onChange={handleName} />
-
+         <input type="text" name="name" value={name} onChange={handleName} />
+        
+       
+        <div>
         <button type="submit">Sign Up</button>
+        </div>
       </form>
 
       {errorMessage && <p className="error-message">{errorMessage}</p>}
 
-      <p>Already have account?</p>
-      <Link to={"/login"}> Login</Link>
     </div>
   );
 }

@@ -1,20 +1,29 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
+import { useParams} from 'react-router-dom';
+import './EditProduct.css';
 
-const EditProduct = ({ type, id }) => {
+const EditProduct = () => {
   const [name, setName] = useState('');
   const [price, setPrice] = useState(0);
   const [description, setDescription] = useState('');
+  const [img, setImg] = useState('');
 
+  const {type, id} = useParams ()
+ 
+  
   useEffect(() => {
+    
     const fetchData = async () => {
       try {
-        // Fetch product data from database
-        const res = await axios.get(`/api/${type}/${id}`);
-        const { name, price, description } = res.data;
+      
+        const res = await axios.get(`http://localhost:5005/${type}/getBy/${id}`);
+        const { name, img, price, description } = res.data;
         setName(name);
         setPrice(price);
         setDescription(description);
+        setImg(img);
+
       } catch (err) {
         console.error(err);
       }
@@ -26,16 +35,17 @@ const EditProduct = ({ type, id }) => {
   const handleSubmitForm = async (e) => {
     e.preventDefault();
 
-    // Create a new product object with updated values
+    
     const updatedProduct = {
       name,
       price,
       description,
+      img,
     };
 
     try {
-      // Send updated product data to the database
-      const res = await axios.put(`/api/${type}/${id}`, updatedProduct);
+      
+      const res = await axios.put(`http://localhost:5005/${type}/edit/${id}`, updatedProduct);
       console.log(res.data);
     } catch (err) {
       console.error(err);
@@ -56,6 +66,15 @@ const EditProduct = ({ type, id }) => {
           />
         </div>
         <div>
+          <label htmlFor="img">Image:</label>
+          <input
+            type="text"
+            id="img"
+            value={img}
+            onChange={(e) => setImg(e.target.value)}
+          />
+        </div>
+        <div>
           <label htmlFor="price">Price:</label>
           <input
             type="number"
@@ -72,7 +91,7 @@ const EditProduct = ({ type, id }) => {
             onChange={(e) => setDescription(e.target.value)}
           />
         </div>
-        <button type="submit">Save Changes</button>
+        <button>Save Changes</button>
       </form>
     </div>
   );

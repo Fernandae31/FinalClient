@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: 'Open Sans', sans-serif;
+
+}
+
+.homepage{
+    margin-top: 80px;
+  }
+  
+  #bienvenida{
+      margin: 10px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+  }
+  
+  #bienvenida header h1 {
+      font-size: 45px;
+      font-weight: 900;
+      margin: 5px;
+      color: plum
+  }
+  
+  .Description{
+      text-align: center;
+      margin-top: 10px;
+      font-size: 25px;
+      text-align: center;
+    }
+    
+    .contenido1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 50px;
+      font-size: small;
+    }
+    
+    .texto {
+      width: 50%;
+      padding: 0 30px;
+    }
+    
+    
+    .texto1, .texto2, .texto3, .texto4 {
+      font-size: 18px;
+      line-height: 1.5;
+      color: #090408;
+      margin-bottom: 40px;
+      max-width: 800px;
+    }
+   
+    @media (max-with: 1540px){
+      
+    }
+  

@@ -1,0 +1,40 @@
+
+.SignupPage  {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+
+
+  .SignupPage label {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 16px;
+    padding: 15px;
+  }
+
+  .SignupPage input[type="password"], input[type="email"], input[type="text"] {
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 25px;
+    font-size: 16px;
+    border: 1px solid #ec68d4;
+    border-radius: 5px;
+  }
+
+  .SignupPage  button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 15px;
+    margin-bottom: 25px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #e58ee7;
+    color: #fff;
+    cursor: pointer;
+  }
+
