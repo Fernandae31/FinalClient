@@ -10,8 +10,8 @@ function MangasList() {
 
   useEffect(() => {
     
-   
-    axios.get('http://localhost:5005/products/products').then(res => {
+    const baseURL = process.env.REACT_APP_SERVER_URL || "http://localhost:5005";
+    axios.get(`${baseURL}/products/products`).then(res => {
       setManga(res.data);
       console.log(res.data)
     });

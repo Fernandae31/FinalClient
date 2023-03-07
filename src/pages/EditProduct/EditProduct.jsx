@@ -17,7 +17,8 @@ const EditProduct = () => {
     const fetchData = async () => {
       try {
       
-        const res = await axios.get(`http://localhost:5005/${type}/getBy/${id}`);
+        const baseURL = process.env.REACT_APP_SERVER_URL || "http://localhost:5005";
+        const res = await axios.get(`${baseURL}/${type}/getBy/${id}`);
         const { name, img, price, description } = res.data;
         setName(name);
         setPrice(price);
@@ -45,7 +46,8 @@ const EditProduct = () => {
 
     try {
       
-      const res = await axios.put(`http://localhost:5005/${type}/edit/${id}`, updatedProduct);
+      const baseURL = process.env.REACT_APP_SERVER_URL || "http://localhost:5005";
+      const res = await axios.put(`${baseURL}${type}/edit/${id}`, updatedProduct);
       console.log(res.data);
     } catch (err) {
       console.error(err);

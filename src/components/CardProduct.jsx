@@ -1,14 +1,22 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import './CardProduct.css';
-
-
-
+import axios from 'axios';
 
 const CardProduct = ({ figure, type }) => {
-  const handleDelete = () => {
-    console.log('Eliminar');
-  }
+  const handleDelete = async (id) => {
+    console.log('Eliminar',id);
+    try {
+      
+     
+      const baseURL = process.env.REACT_APP_SERVER_URL || "http://localhost:5005";
+      const res = await axios.post(`${baseURL}${type}/delete/${id}`);
+      console.log(res.data);
+} catch (err) {
+  console.error(err);
+}
+};
+
   return (
     <div className="card">
       <img src={figure.img} alt={figure.name} height="150" width="150" />
@@ -20,7 +28,7 @@ const CardProduct = ({ figure, type }) => {
         <Link to={`/edit-manga/${type}/${figure._id}/`}>
           <button className='boton1'>Edit Manga</button>
         </Link>
-        <button className='boton2'onClick={handleDelete}>Eliminar</button>
+        <button className='boton2'onClick= {() => handleDelete(figure._id)}>Eliminar</button>
       </div>
     </div>
   );

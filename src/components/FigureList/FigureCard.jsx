@@ -7,8 +7,8 @@ function Figures() {
 
   useEffect(() => {
     
-   
-    axios.get('http://localhost:5005/figures/figures').then(res => {
+    const baseURL = process.env.REACT_APP_SERVER_URL || "http://localhost:5005";
+    axios.get(`${baseURL}/figures/figures`).then(res => {
       setFigures(res.data);
       console.log(res.data)
     });

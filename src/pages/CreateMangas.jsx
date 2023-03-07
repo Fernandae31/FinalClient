@@ -16,7 +16,8 @@ const CreateMangas = () => {
 
     try {
      
-      const res = await axios.post('http://localhost:5005/products/create', newManga);
+      const baseURL = process.env.REACT_APP_SERVER_URL || "http://localhost:5005";
+      const res = await axios.post(`${baseURL}/products/create`, newManga);
       console.log(res.data);
      
       setName('');

@@ -16,8 +16,8 @@ const FigureForm = () => {
     const newFigure = ( name, price, description );
 
     try {
-      
-      const res = await axios.post('http://localhost:5005/products/create', newFigure);
+      const baseURL = process.env.REACT_APP_SERVER_URL || "http://localhost:5005";
+      const res = await axios.post(`${baseURL}/figures/create`, newFigure);
       console.log(res.data);
       
       setName('');
