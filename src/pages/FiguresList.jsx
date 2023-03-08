@@ -2,9 +2,9 @@ import React, {useEffect, useState} from 'react'
 import axios from 'axios';
 import CardProduct from '../components/CardProduct';
 import {Link} from 'react-router-dom'
-import './MangasList.css';
 
-function MangasList() {
+
+function FiguresList() {
     const [mangas, setManga] = useState([]);
 
   useEffect(() => {
@@ -17,10 +17,10 @@ function MangasList() {
 }, [])
 
   return (
-
+    
     <div>
         {mangas.map(manga => (
-          <CardProduct key={manga._id} figure={manga} type={"products"}/>
+          <CardProduct key={manga._id} figure={manga} type={"figures"}/>
         ))}
           
           <Link to = "/create-manga">
@@ -30,4 +30,4 @@ function MangasList() {
   )
 }
 
-export default MangasList;
+export default FiguresList;

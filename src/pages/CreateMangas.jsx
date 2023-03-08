@@ -32,7 +32,7 @@ const CreateMangas = () => {
 
   return (
     <div>
-      <h1>Add Manga</h1>
+      <h1>Create Product</h1>
       <form onSubmit={handleSubmitForm}>
         <div>
           <label htmlFor="name">Name:</label>

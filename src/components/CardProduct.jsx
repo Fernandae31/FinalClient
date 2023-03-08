@@ -2,6 +2,12 @@ import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import './CardProduct.css';
 import axios from 'axios';
+import Card from 'react-bootstrap/Card';
+import Button from 'react-bootstrap/Button';
+
+
+
+
 const CardProduct = ({ figure, type }) => {
 
 const navigate = useNavigate()
@@ -23,20 +29,24 @@ const navigate = useNavigate()
 };
 
   return (
-    <div className="card">
-      <img src={figure.img} alt={figure.name} height="150" width="150" />
-      <div className="card-body">
-        <h5 className="card-title">{figure.name}</h5>
-        <p className="card-text">{figure.description}</p>
-        <p className="card-price">{figure.price}</p>
-        <p>{figure._id}</p>
-        <Link to={`/edit-manga/${type}/${figure._id}/`}>
-          <button className='boton1'>Edit Manga</button>
-        </Link>
-        <button className='boton2'onClick= {() => handleDelete(figure._id)}>Eliminar</button>
-      </div>
-    </div>
-  );
+    <div className="d-inline-block">
+    <Card style={{ width: '18rem' }}>
+      <Card.Img src={figure.img} alt={figure.name} height="270" width="120" />
+      <Card.Body>
+        <Card.Title>{figure.name}</Card.Title>
+        <Card.Text>{figure.description}</Card.Text>
+        <Card.Text>Price:{figure.price}</Card.Text>
+        
+          <Link to={`/edit-manga/${type}/${figure._id}/`}>
+            <Button className="botone">Edit</Button>
+          </Link>
+          <Button className="botone1" onClick={() => handleDelete(figure._id)}>Delete</Button>
+        
+      </Card.Body>
+    </Card>
+  </div>
+);
+
 };
 
 export default CardProduct;

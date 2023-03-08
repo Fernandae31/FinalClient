@@ -1,0 +1,21 @@
+.buton1{
+    background-color: #e58ee7;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-right: 10px;
+  }
+  .aside-image {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(0, 0, 0, 0.7); /* Ajusta la opacidad del fondo si lo deseas */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  

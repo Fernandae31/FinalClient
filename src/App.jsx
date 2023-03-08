@@ -6,7 +6,7 @@ import HomePage from "./pages/HomePage";
 import ProfilePage from "./pages/ProfilePage/ProfilePage";
 import SignupPage from "./pages/SignupPage/SignupPage";
 import LoginPage from "./pages/LoginPage/LoginPage";
-import FigureCard from "./components/FigureList/FigureCard"
+import FiguresList from "./pages/FiguresList";
 import MangasList from "./pages/MangasList";
 import CreateMangas from './pages/CreateMangas'
 import EditProduct from "./pages/EditProduct/EditProduct";
@@ -16,8 +16,10 @@ import EditProduct from "./pages/EditProduct/EditProduct";
 function App() {
   return (
     <div className="App">
+   
       <h1 className="Titulo texto-centrado"> </h1>
       <Header/>
+      <img src="images/banner.png" alt="logo" style={{width: '100%', height: 'auto'}} />
       <Navbar/>
 
       
@@ -51,17 +53,18 @@ function App() {
           }
         />
                 <Route
-          path="/list/figures"
+          path="/list/figures/"
           element={
 
-              <FigureCard/>
+              <FiguresList/>
             
           }
         />
+       
         <Route
           path="/list/products"
           element={
-            
+          
               <MangasList />
             
           }

@@ -1,15 +1,15 @@
-.boton1 {
-    background-color: #e58ee7;
-    color: white;
-    border: none;
-    padding: 10px;
+.botone-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .botone {
+    width: 100px;
     margin-right: 10px;
   }
   
-  .boton2 {
-    background-color: #e58ee7;
-    color: white;
-    border: none;
-    padding: 10px;
+  .botone1 {
+    width: 100px;
     margin-right: 10px;
   }
