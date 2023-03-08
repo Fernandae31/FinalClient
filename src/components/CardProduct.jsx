@@ -16,6 +16,7 @@ const navigate = useNavigate()
 
   const handleDelete = async (id) => {
     console.log('Eliminar',id);
+    
     try {
       
      
@@ -28,23 +29,27 @@ const navigate = useNavigate()
 }
 };
 
-  return (
+  return ( <>
+  
     <div className="d-inline-block">
+    
     <Card style={{ width: '18rem' }}>
-      <Card.Img src={figure.img} alt={figure.name} height="270" width="120" />
+      <Card.Img src={figure.img} alt={figure.name} height="270" width="5000" />
       <Card.Body>
         <Card.Title>{figure.name}</Card.Title>
         <Card.Text>{figure.description}</Card.Text>
         <Card.Text>Price:{figure.price}</Card.Text>
-        
-          <Link to={`/edit-manga/${type}/${figure._id}/`}>
+        <Link to={`/edit-manga/${type}/${figure._id}/`}>
             <Button className="botone">Edit</Button>
-          </Link>
+        </Link>
           <Button className="botone1" onClick={() => handleDelete(figure._id)}>Delete</Button>
-        
-      </Card.Body>
+          </Card.Body>
     </Card>
+
+
   </div>
+
+  </>
 );
 
 };

@@ -36,13 +36,9 @@ function Navbar() {
 
     {isLoggedIn && (
       <>
-        <button className="nav-button" onClick={logOutUser}>
-          Log Out
-        </button>
+        <button className="nav-button" onClick={logOutUser}>Log Out</button>
   
-        <Link to="/profile">
-          <button className="nav-button">Profile</button>
-        </Link>
+        <Link to="/profile"><button className="nav-button">Profile</button></Link>
   
         <span>{user && user.name}</span>
       </>

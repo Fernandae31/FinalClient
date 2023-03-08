@@ -1,11 +1,11 @@
 
 .SignupPage  {
-    display: flex;
-    justify-content: center;
     align-items: center;
     height: 100vh;
     max-width: 600px;
     margin: 0 auto;
+    position: absolute;
+    top: 0;
   }
 
 

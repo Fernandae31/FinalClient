@@ -46,9 +46,9 @@ function SignupPage() {
   };
 
   return (
-   
-
-
+    <>
+    <div> <img src="images/joinUs.png" alt="banner join-us" width="2600" height="200" /></div>
+  
      <div className="SignupPage" style={{ position: "relative" }}>
 
        <form  onSubmit={handleSignupSubmit}>
@@ -71,6 +71,7 @@ function SignupPage() {
 
         {errorMessage && <p className="error-message">{errorMessage}</p>}
          </div>
+         </>
   );
 }
 
