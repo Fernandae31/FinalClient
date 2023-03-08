@@ -5,27 +5,30 @@ import {Link} from 'react-router-dom'
 
 
 function FiguresList() {
-    const [mangas, setManga] = useState([]);
+    const [Figures, setManga] = useState([]);
+   
 
   useEffect(() => {
     
     const baseURL = process.env.REACT_APP_SERVER_URL || "http://localhost:5005";
-    axios.get(`${baseURL}/products/products`).then(res => {
+    axios.get(`${baseURL}/figures/figures`).then(res => {
       setManga(res.data);
       console.log(res.data)
     });
 }, [])
 
-  return (
-    
-    <div>
-        {mangas.map(manga => (
-          <CardProduct key={manga._id} figure={manga} type={"figures"}/>
-        ))}
-          
-          <Link to = "/create-manga">
-          <button className='buton1'> Create Product</button></Link>
 
+  return (
+    <div>
+      
+
+      {Figures.map(figure => (
+        <CardProduct key={figure._id} figure={figure} type={"figures"} />
+      ))}
+
+      <Link to="/create-manga">
+        <button className='buton1'> Create Product</button>
+      </Link>
     </div>
   )
 }

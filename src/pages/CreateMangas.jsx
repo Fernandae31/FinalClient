@@ -1,4 +1,5 @@
-import { useState } from 'react';
+import { useState} from 'react';
+import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import './CreateMangas.css';
 
@@ -8,22 +9,29 @@ const CreateMangas = () => {
   const [price, setPrice] = useState(0);
   const [description, setDescription] = useState('');
   const [img, setImg] = useState('');
+  const [category, setCategory] = useState('');
+
+  const navigate = useNavigate()
 
   const handleSubmitForm = async (e) => {
     e.preventDefault();
+
+   
+
 
     const newManga = { name,img, price, description };
 
     try {
      
       const baseURL = process.env.REACT_APP_SERVER_URL || "http://localhost:5005";
-      const res = await axios.post(`${baseURL}/products/create`, newManga);
+      const res = await axios.post(`${baseURL}/${category}/create`, newManga);
       console.log(res.data);
      
       setName('');
       setPrice(0);
       setDescription('');
       setImg('');
+      navigate (`/list/${category}`)
 
     } catch (err) {
       console.error(err);
@@ -72,6 +80,14 @@ const CreateMangas = () => {
             value={description}
             onChange={(e) => setDescription(e.target.value)}
           />
+        </div>
+        <div>
+            <label htmlFor="category">Category:</label>
+            <select id="category" value={category} onChange={(e) => setCategory(e.target.value)}>
+            <option value="">Select</option>
+            <option value="products">Manga</option>
+            <option value="figures">Figures</option>
+          </select>
         </div>
         <button type="submit">Add Product</button>
        

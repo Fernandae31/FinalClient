@@ -16,7 +16,7 @@
     padding: 15px;
   }
 
-  .SignupPage input[type="password"], input[type="email"], input[type="text"] {
+  .SignupPage input[type="password"], input[type="email"], input[type="text"],input[type="name"] {
     width: 100%;
     padding: 15px;
     margin-bottom: 25px;

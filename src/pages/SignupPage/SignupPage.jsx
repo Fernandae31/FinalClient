@@ -3,8 +3,6 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import authService from "../../services/auth.service";
 
-
-
 function SignupPage() {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -49,31 +47,30 @@ function SignupPage() {
 
   return (
    
-    <div className="SignupPage" style={{ position: "relative" }}>
 
-      <form  onSubmit={handleSignupSubmit}>
+
+     <div className="SignupPage" style={{ position: "relative" }}>
+
+       <form  onSubmit={handleSignupSubmit}>
         <label>Email:</label>
         <input type="email" name="email" value={email} onChange={handleEmail} />
 
-        <label>Password:</label>
-        <input
+       <label>Password:</label>
+       <input
           type="password"
           name="password"
-          value={password}
-          onChange={handlePassword}
-        />
+           value={password}
+           onChange={handlePassword}
+         />
         <label>Name:</label>
-         <input type="text" name="name" value={name} onChange={handleName} />
-        
-       
+        <input type="name" name="name" value={name} onChange={handleName} />
         <div>
         <button type="submit">Sign Up</button>
         </div>
-      </form>
+        </form>
 
-      {errorMessage && <p className="error-message">{errorMessage}</p>}
-
-    </div>
+        {errorMessage && <p className="error-message">{errorMessage}</p>}
+         </div>
   );
 }
 
