@@ -19,7 +19,7 @@ function App() {
    
       <h1 className="Titulo texto-centrado"> </h1>
       <Header/>
-      <img src="images/banner.png" alt="logo" style={{width: '100%', height: 'auto'}} />
+      <img src="images/banner.png" alt="logo" style={{width: '100%', height: '225px'}} />
       <Navbar/>
 
       
