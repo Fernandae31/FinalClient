@@ -2,14 +2,27 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color:  #e58ee7;
   }
   
   .botone {
     width: 100px;
-    margin-right: 10px;
+    margin-right: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 10px 10px 10px #d2a7ee;
+   
+   
   }
   
   .botone1 {
     width: 100px;
-    margin-right: 10px;
+    margin-right: 20px;
+    padding: 15px;
+    background-color:  #e58ee7;
+    box-shadow: 10px 10px 10px #d2a7ee;
+    border-radius: 5px;
+   
+    
   }
+  

@@ -13,6 +13,7 @@ import EditProduct from "./pages/EditProduct/EditProduct";
 
 
 
+
 function App() {
   return (
     <div className="App">
@@ -88,6 +89,9 @@ function App() {
           }
           
         />
+      
+    
+        
       </Routes>
       
 

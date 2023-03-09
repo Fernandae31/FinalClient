@@ -23,18 +23,20 @@
     font-size: 16px;
     border: 1px solid #ec68d4;
     border-radius: 5px;
+    box-shadow: 10px 10px 10px #e58ee7;
   }
 
   .SignupPage  button[type="submit"] {
     display: block;
     width: 100%;
     padding: 15px;
-    margin-bottom: 25px;
+    margin-top: 45px;
     font-size: 16px;
     border: none;
     border-radius: 5px;
     background-color: #e58ee7;
     color: #fff;
     cursor: pointer;
+    box-shadow: 10px 10px 10px #b855f5;
   }
 

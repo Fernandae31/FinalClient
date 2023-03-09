@@ -57,7 +57,7 @@ function LoginPage() {
 
   return (
     <>
-    <div> <img src="images/logIn.png" alt="banner join-us" width="2600" height="180" /></div>
+    <div> <img src="images/logIn.png" alt="banner join-us" width="100%" height="190" /></div>
     <div className="LoginPage" style={{ position: "relative" }}>
 
       <form onSubmit={handleLoginSubmit}>
