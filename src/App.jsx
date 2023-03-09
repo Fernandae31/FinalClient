@@ -10,6 +10,7 @@ import FiguresList from "./pages/FiguresList";
 import MangasList from "./pages/MangasList";
 import CreateMangas from './pages/CreateMangas'
 import EditProduct from "./pages/EditProduct/EditProduct";
+import Order from "./components/Order";
 
 
 
@@ -88,6 +89,14 @@ function App() {
             
           }
           
+        />
+        <Route
+          path="/order"
+          element={
+           
+              <Order />
+           
+          }
         />
       
     

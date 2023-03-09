@@ -1,6 +1,6 @@
 .botone-container {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     background-color:  #e58ee7;
   }

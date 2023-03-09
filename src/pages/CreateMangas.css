@@ -1,42 +1,44 @@
-button{
-    text-decoration: none;
-    width: 10%;
-    margin: 15px;
-    font-size: 16px;
-    border: none;
+form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  fieldset {
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid gray;
     border-radius: 5px;
-    background-color: #e58ee7;
+    min-width: 250px;
+  }
+  
+  legend {
+    font-weight: bold;
+    font-size: 1.2em;
+  }
+  
+  input, textarea, select {
+    margin-bottom: 10px;
+    width: 35%;
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    font-size: 1em;
+  }
+  
+  button {
+    margin: 10px 0;
+    padding: 10px 20px;
+    border-radius: 5px;
     color: #fff;
+    border: none;
+    font-size: 1em;
     cursor: pointer;
-}
-input[type="text"]{
-    width: 14%;
-    padding: 10px;
-    margin-bottom: 15px;
-    font-size: 16px;
-    border: 1px solid #ec68d4;
-    border-radius: 5px;
-}
-textarea{
-    width: 14%;
-    padding: 10px;
-    font-size: 16px;
-    border: 1px solid #ec68d4;
-    border-radius: 5px;
-}
-input[type="number"]{
-    width: 5%;
-    padding: 10px;
-    margin-bottom: 15px;
-    font-size: 16px;
-    border: 1px solid #ec68d4;
-    border-radius: 5px;
-}
-label{
-display: block;
- width: auto;
- top: 10px;
- left: 50px;
- padding: 5px 5px;
- border-radius: 20px;
-}
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #e668d1;
+  }
+  input[type="text"] {
+    width: 35%;
+  }

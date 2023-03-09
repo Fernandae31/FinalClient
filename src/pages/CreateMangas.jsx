@@ -40,59 +40,56 @@ const CreateMangas = () => {
 
   return (
     <div>
-      <h1>Create Product</h1>
-      <form onSubmit={handleSubmitForm}>
-        <div>
-          <label htmlFor="name">Name:</label>
-
-          <input
-            type="text"
-            id="name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-          />
-        </div>
-        <div>
-          <label htmlFor="img">Image:</label>
-
-          <input
-            type="text"
-            id="img"
-            value={img}
-            onChange={(e) => setImg(e.target.value)}
-          />
-        </div>
-        <div>
-          <label htmlFor="price">Price:</label>
-
-          <input
-            type="number"
-            id="price"
-            value={price}
-            onChange={(e) => setPrice(e.target.value)}
-          />
-        </div>
-        <div>
-          <label htmlFor="description">Description:</label>
-          
-          <textarea
-            id="description"
-            value={description}
-            onChange={(e) => setDescription(e.target.value)}
-          />
-        </div>
-        <div>
-            <label htmlFor="category">Category:</label>
-            <select id="category" value={category} onChange={(e) => setCategory(e.target.value)}>
-            <option value="">Select</option>
-            <option value="products">Manga</option>
-            <option value="figures">Figures</option>
-          </select>
-        </div>
-        <button type="submit">Add Product</button>
-       
-      </form>
+  <h1>Create Product</h1>
+  <form onSubmit={handleSubmitForm}>
+    <fieldset>
+      <legend>Name:</legend>
+      <input
+        type="text"
+        id="name"
+        value={name}
+        onChange={(e) => setName(e.target.value)}
+      />
+    </fieldset>
+    <fieldset>
+      <legend>Image:</legend>
+      <input
+        type="text"
+        id="img"
+        value={img}
+        onChange={(e) => setImg(e.target.value)}
+      />
+    </fieldset>
+    <fieldset>
+      <legend>Price:</legend>
+      <input
+        type="text"
+        id="price"
+        value={price}
+        onChange={(e) => setPrice(e.target.value)}
+      />
+    </fieldset>
+    <fieldset>
+      <legend>Description:</legend>
+      <textarea
+        id="description"
+        value={description}
+        onChange={(e) => setDescription(e.target.value)}
+      />
+    </fieldset>
+    <fieldset>
+      <legend>Category:</legend>
+      <select id="category" value={category} onChange={(e) => setCategory(e.target.value)}>
+        <option value="">Select</option>
+        <option value="products">Manga</option>
+        <option value="figures">Figures</option>
+      </select>
+    </fieldset>
+    <div>
+      <button type="submit">Add Product</button>
     </div>
+  </form>
+</div>
   );
 };
 

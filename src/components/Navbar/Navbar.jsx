@@ -22,10 +22,13 @@ function MyNav() {
           <Nav.Link as={Link} to="/list/figures">
             Figures
           </Nav.Link>
+          <Nav.Link as={Link} to="/order">
+           Orders
+          </Nav.Link>
         </Nav>
         {isLoggedIn ? (
           <Nav>
-            <Nav.Link as={Link} to="/profile">
+            <Nav.Link as={Link} to="/">
               {user && user.name}
             </Nav.Link>
             <Nav.Link onClick={logOutUser}>Logout</Nav.Link>
@@ -45,5 +48,6 @@ function MyNav() {
     </Navbar>
   );
 }
+
 
 export default MyNav;
