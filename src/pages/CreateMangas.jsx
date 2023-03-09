@@ -40,7 +40,7 @@ const CreateMangas = () => {
 
   return (
     <div>
-  <h1>Create Product</h1>
+
   <form onSubmit={handleSubmitForm}>
     <fieldset>
       <legend>Name:</legend>
@@ -84,10 +84,11 @@ const CreateMangas = () => {
         <option value="products">Manga</option>
         <option value="figures">Figures</option>
       </select>
-    </fieldset>
-    <div>
+      <div>
       <button type="submit">Add Product</button>
     </div>
+    </fieldset>
+
   </form>
 </div>
   );

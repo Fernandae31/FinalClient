@@ -1,40 +1,46 @@
 .LoginPage {
+  display: flex;
+  flex-direction: column;
   align-items: center;
-    height: 100vh;
-    max-width: 600px;
-    margin: 0 auto;
-    position: absolute;
-    top: 0;
-  }
+  margin-top: 50px;
+  box-shadow: 10px 10px 10px #e58ee7;
+}
 
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 70px;
+  border: 1px solid #e97dec;
+  box-shadow: 10px 10px 10px #e58ee7;
+  padding: 20px;
+  margin-bottom: 70px;
+ 
+}
 
-  .LoginPage label {
-    display: block;
-    margin-bottom: 10px;
-    font-size: 16px;
-  }
+label {
+  font-size: 18px;
+  margin-bottom: 10px;
+ 
+}
 
-  .LoginPage input[type="password"], input[type="email"] {
-    width: 100%;
-    padding: 15px;
-    margin-bottom: 25px;
-    font-size: 16px;
-    border: 1px solid #ec68d4;
-    border-radius: 5px;
-    box-shadow: 10px 10px 10px #e58ee7;
-  }
+input[type="submit"] {
+  font-size: 16px;
+  padding: 65px 55px;
+  box-shadow: 10px 10px 10px #e58ee7;
+  margin-bottom: 20px;
+  border:#dc83f3;
+  border-radius: 4px;
+}
 
-  .LoginPage button[type="submit"] {
-    display: block;
-    width: 100%;
-    padding: 15px;
-    margin-top: 45px;
-    font-size: 16px;
-    border: none;
-    border-radius: 5px;
-    background-color: #e58ee7;
-    box-shadow: 10px 10px 10px #b855f5;
-    color: #fff;
-    cursor: pointer;
-  }
-
+button[type="submit"] {
+  font-size: 16px;
+  width: 50%;
+  background-color: #dc83f3;
+  
+  color: white;
+  padding: 8px 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}

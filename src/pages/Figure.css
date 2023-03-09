@@ -8,12 +8,12 @@
   }
   
   .figure-form h1 {
-    margin-bottom: 20px;
+    margin-bottom: 25px;
   }
   
   .figure-form label {
     display: block;
-    margin-bottom: 5px;
+    margin-bottom: 25px;
   }
   
   .figure-form input,
@@ -22,7 +22,7 @@
     padding: 10px;
     border: 1px solid #ccc;
     border-radius: 5px;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
   }
   
   .figure-form button[type="submit"] {

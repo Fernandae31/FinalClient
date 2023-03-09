@@ -1,13 +1,12 @@
 
-.SignupPage  {
-    align-items: center;
-    height: 100vh;
-    max-width: 600px;
-    margin: 0 auto;
-    position: absolute;
-    top: 0;
-  }
-
+.SignupPage {
+  align-items: center;
+  min-height: 100vh;
+  max-width: 600px;
+  margin: 0 auto;
+  position: absolute;
+  top: 15;
+}
 
   .SignupPage label {
     display: block;
@@ -28,7 +27,7 @@
 
   .SignupPage  button[type="submit"] {
     display: block;
-    width: 100%;
+    width: 150%;
     padding: 15px;
     margin-top: 45px;
     font-size: 16px;
@@ -37,6 +36,6 @@
     background-color: #e58ee7;
     color: #fff;
     cursor: pointer;
-    box-shadow: 10px 10px 10px #b855f5;
+  
   }
 

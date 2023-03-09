@@ -65,7 +65,7 @@ function LoginPage() {
         <input type="email" name="email" value={email} onChange={handleEmail} />
 
         <label>Password:</label>
-        <input type="password" name="password" value={password} onChange={handlePassword}/>
+        <input type="password" name="password" value={password} onChange={handlePassword}  style={{ width: "100%" }} />
 
         <button type="submit">Log In</button>
         </form>

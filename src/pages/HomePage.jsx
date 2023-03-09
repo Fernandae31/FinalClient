@@ -92,8 +92,8 @@ function HomePage() {
 
     </div>
     <div className="image">
-    <img src="images/gatito.png" alt="logo" width="640" height="565" />
-    <img src="images/figuras.png" alt="logo" width="640" height="565" />
+    <img src="images/gatito.png" alt="logo" width="540" height="565" />
+    <img src="images/figuras.png" alt="logo" width="540" height="565" />
       
     </div>
   </div>
