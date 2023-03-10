@@ -1,70 +1,44 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Neko Manga - Tienda en línea 
+Este proyecto es una tienda en línea que ofrece una amplia variedad de productos relacionados con el manga y el anime, incluyendo mangas, figuritas, posters, y otros productos de colección.
 
-## Available Scripts
+La tienda está desarrollada con tecnología React y Bootstrap, y está dividida en dos partes: la carpeta client y la carpeta server. La carpeta client contiene el código fuente de la aplicación cliente, mientras que la carpeta server contiene el código fuente del servidor.
 
-In the project directory, you can run:
+La tienda en línea de manga y anime se ha desarrollado con el objetivo de proporcionar una experiencia de compra en línea fácil y conveniente para los amantes del manga y el anime. Con una interfaz de usuario intuitiva y atractiva, los usuarios pueden navegar fácilmente a través de los productos y realizar compras de forma segura y eficiente.
 
-### `npm start`
+Tecnologías utilizadas
+React
+Bootstrap
+Estructura de la carpeta
+Este proyecto está dividido en dos partes: la carpeta client y la carpeta server.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Client
+La carpeta client contiene el código fuente de la aplicación cliente, que está desarrollada con React.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+Server
+La carpeta server contiene el código fuente del servidor.
 
-### `npm test`
+Instalación
+Para instalar las dependencias necesarias, es necesario ejecutar el siguiente comando en la carpeta raíz del proyecto:
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+npm install
+Ejecución
+Para iniciar la aplicación, es necesario ejecutar los siguientes comandos en la carpeta raíz del proyecto:
 
-### `npm run build`
+cd client
+npm start
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+En otra terminal:
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+cd server
+npm start
+Contribuciones
+Si deseas contribuir al proyecto, por favor sigue estos pasos:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Haz un fork del repositorio:
+Client: https://github.com/Fernandae31/FinalClient
+Server: https://github.com/Fernandae31/FinalServer
+Crea una rama para tu contribución (git checkout -b feature/MyFeature)
+Haz tus cambios y realiza los commits (git commit -am 'Add some feature')
+Haz push a la rama (git push origin feature/MyFeature)
+Abre un Pull Request

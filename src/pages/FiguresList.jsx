@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import CardProduct from "../components/CardProduct";
-import { Link, useNavigate } from "react-router-dom";
+import {useNavigate } from "react-router-dom";
 
 function FiguresList() {
   const [figures, setFigures] = useState([]);
@@ -38,9 +38,6 @@ function FiguresList() {
           handleDelete={handleDelete}
         />
       ))}
-      <Link to="/create-manga">
-        <button className="buton1"> Create Product</button>
-      </Link>
     </div>
   );
 }

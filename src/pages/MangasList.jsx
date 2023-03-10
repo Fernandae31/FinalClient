@@ -1,7 +1,8 @@
-import React, {useEffect, useState} from 'react'
+import React, {useEffect, useState, useContext } from 'react'
 import axios from 'axios';
 import CardProduct from '../components/CardProduct';
 import {Link, useNavigate} from 'react-router-dom';
+import { AuthContext } from '../context/auth.context';
 import './MangasList.css';
 
 function MangasList() {
@@ -28,16 +29,24 @@ function MangasList() {
             console.error(err);
         }
     };
+    const { user } = useContext(AuthContext)
+  console.log(user)
+  
+  let admin = "user"
+  if (user && user.type) {
+    admin = "admin"
+  } 
 
     return (
         <div>
             {mangas.map(manga => (
                 <CardProduct key={manga._id} figure={manga} type={"products"} handleDelete={handleDelete} />
             ))}
-          
+           {admin === 'admin' && (
             <Link to="/create-manga">
                 <button className='buton1'>Create Product</button>
             </Link>
+              )}
         </div>
     )
 }

@@ -10,27 +10,27 @@ function HomePage() {
   <section id="bienvenida">
     
     <header>
-      <h1>Bienvenido!🌸</h1>
+      <h1>Welcome!🌸</h1>
     </header>
   </section>
 <section>
-  <h1 className="Description">⛩️Encuentra productos originales importados desde Japón⛩️</h1>
+  <h1 className="Description">⛩️Find original products imported from Japan⛩️</h1>
   </section>
   
   <div className="contenido1">
     <div className="texto">
       <p className="texto1">
-        Encontrarás una amplia selección de productos relacionados con el mundo del manga y anime.
+      You will find a wide selection of products related to the world of manga and anime.
       </p>
       <p className="texto2">
-        Contamos con juegos y artículos de colección, aquí tendrás todo lo que necesitas para satisfacer tu pasión por este fascinante universo. Ofrecemos productos de alta calidad a precios competitivos, junto con un servicio de atención al cliente excepcional.
+      We have games and collectibles, here you will have everything you need to satisfy your passion for this fascinating universe. We offer high-quality products at competitive prices, along with exceptional customer service.
       </p>
      
       <p className="texto3">
-        Podrás elegir entre clásicos hasta los últimos éxitos. Descubre figuras coleccionables, ropa, accesorios, mangas y mucho más.
+      You can choose from classics to the latest hits. Discover collectible figures, clothing, accessories, sleeves and much more.
       </p>
       <p className="texto4">
-        ⭐¡Explora nuestra tienda en línea!⭐
+        ⭐Explore our online store!⭐
 
         
       </p>
